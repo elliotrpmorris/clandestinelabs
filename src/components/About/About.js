@@ -23,7 +23,7 @@ function About() {
       </Grid>
       <Who/>
       <br/>
-      <What/>
+      <What/> 
     </section>
   );
 }
