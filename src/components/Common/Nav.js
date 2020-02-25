@@ -1,6 +1,8 @@
 import React from "react";
 import About from "../About/About";
 import Home from "../Home/Home";
+import Contact from "../Contact/Contact";
+import Services from "../Services/Services";
 import styled from 'styled-components';
 import {
   BrowserRouter as Router,
@@ -65,11 +67,19 @@ function Nav() {
             <Item>
               <Page to="/about">About</Page>
             </Item>
+            <Item>
+              <Page to="/services">Services</Page>
+            </Item>
+            <Item>
+              <Page to="/contact">Contact</Page>
+            </Item>
           </NavBar>
         </nav>
       </section>
       <Route path="/" exact component={Home} />
       <Route path="/about"  component={About} />
+      <Route path="/services"  component={Services} />
+      <Route path="/contact"  component={Contact} />
     </Router>
   );
 }

@@ -1,11 +1,14 @@
 import React from 'react';
-import './App.css';
-import Nav from './Nav/Nav';
+import Nav from './Common/Nav';
+import Footer from './Common/Footer';
+import GlobalStyle from './Common/GlobalStyles';
 
 function App() {
   return (
     <main>
+      <GlobalStyle/>
       <Nav/>
+      <Footer/>
     </main>
   );
 }
