@@ -4,6 +4,8 @@ import Home from "../Home/Home";
 import Contact from "../Contact/Contact";
 import Services from "../Services/Services";
 import styled from 'styled-components';
+import ThankYou from '../Contact/ThankYou';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -80,6 +82,7 @@ function Nav() {
       <Route path="/about"  component={About} />
       <Route path="/services"  component={Services} />
       <Route path="/contact"  component={Contact} />
+      <Route path="/thank-you"  component={ThankYou} />
     </Router>
   );
 }

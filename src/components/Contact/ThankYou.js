@@ -1,7 +1,4 @@
 import React from 'react';
-import What from './What';
-import Who from './Who';
-import How from './How';
 import styled from 'styled-components';
 import {Grid, Col, Row} from 'react-styled-flexboxgrid';
 
@@ -15,24 +12,18 @@ export const Title = styled.h1`
     }
 `;
 
-function About() {
+function ThankYou() {
   return (
     <section>
        <Grid>
         <Row>
           <Col xs={12}>
-          <Title>About Us</Title>
+          <Title>Thanks!</Title>
           </Col>
         </Row>
       </Grid>
-      <Who/>
-      <br/>
-      <What/> 
-      <br/>
-      <How/>
-      <br/>
     </section>
   );
 }
 
-export default About;
+export default ThankYou;
