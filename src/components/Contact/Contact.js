@@ -35,7 +35,8 @@ class Contact extends React.Component {
         <Grid>
           <Row>
             <Col xs="8">
-            <form onSubmit={this.handleSubmit}>
+            <form name="contact" onSubmit={this.handleSubmit}>
+            <input type="hidden" name="form-name" value="contact" />
               <p>
                 <label>
                   Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
