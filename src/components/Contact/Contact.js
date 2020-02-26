@@ -35,7 +35,7 @@ class Contact extends React.Component {
         <Grid>
           <Row>
             <Col xs="8">
-            <form name="contact" onSubmit={this.handleSubmit} method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+            <form name="contact" onSubmit={this.handleSubmit} >
             <input type="hidden" name="form-name" value="contact" />
               <p>
                 <label>
