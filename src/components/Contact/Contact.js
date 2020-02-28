@@ -27,7 +27,6 @@ export const ContactBackground = styled.div`
 
 export const Box = styled.input`      
   color: #323741;  
-  font-size: 1.1rem;
   display: block;
   width: 100%;
   background: 0 0;
@@ -35,13 +34,22 @@ export const Box = styled.input`
   padding: 5px 5px 0 5px;
   outline: none;
   border: none;
+  
+  font-size: 1rem;
+  @media (min-width: 414px) {
+    font-size: 1.1rem;
+  }
 `;
 
 export const WrapInput = styled.div`
-  width: 50%;
   position: relative;
   border-bottom: 1px solid #323741;
   padding-bottom: 10px;
+  font-size: 3rem;
+  width: 100%;
+  @media (min-width: 414px) {
+    width: 50%;
+  }
 `;
 
 export const Focus = styled.span`

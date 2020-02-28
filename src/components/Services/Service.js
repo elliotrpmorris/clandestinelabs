@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Col, Row} from 'react-styled-flexboxgrid';
-import { faGithub, faLinkedin, } from "@fortawesome/free-brands-svg-icons";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Title = styled.h2`      
@@ -15,13 +13,11 @@ export const Title = styled.h2`
 export const Description = styled.p`      
     color: #323741;  
     font-size: 1.1rem;
+    text-align: center;
 `;
 
 export const CardContainer = styled.div`   
     border-radius: 0.75rem;
-    box-shadow:  0 22px 70px 4px rgba(215,211,203,0.56), 0 0 0 1px rgba(215,211,203, 0.3);
-    background-color: #d7d3cb;
-    cursor: pointer;
     padding: 1.25rem;
 `;
 
@@ -32,18 +28,17 @@ export const Icon = styled(FontAwesomeIcon)`
   
 `;
 
-const Card = ({ title, description }) => (
+const Service = ({ title, description}) => (
     <CardContainer>
       <Row middle="md">
-        <Col xs={12} md={3}>
+        <Col xs={12}>
           <Title>{title}</Title>
-          <Icon icon={faGlobe}/>
         </Col>
-        <Col xs={12} md={9}>
+        <Col xs={12}>
           <Description>{description}</Description>
         </Col>
       </Row>
     </CardContainer>
   )
 
-export default Card 
+export default Service 
