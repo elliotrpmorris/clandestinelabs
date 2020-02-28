@@ -38,7 +38,6 @@ export const Icon = styled(FontAwesomeIcon)`
   }
 `;
 
-
 const Footer = () => (
   <Foot>
     <Grid>
