@@ -41,13 +41,17 @@ export const Box = styled.input`
   }
 `;
 
+export const InputLabel = styled.label`
+  font-size: 1rem;
+`;
+
 export const WrapInput = styled.div`
   position: relative;
   border-bottom: 1px solid #323741;
   padding-bottom: 10px;
   font-size: 3rem;
   width: 100%;
-  @media (min-width: 414px) {
+  @media (min-width: 768px) {
     width: 50%;
   }
 `;
@@ -87,7 +91,8 @@ export const TextBox = styled.textarea`
   resize: vertical;
 `;
 
-export const Btn = styled.button`      
+export const Btn = styled.button`   
+  margin-top: 1rem;   
   color: #fff;  
   font-size: 1.1rem;
   line-height: 1.2;
@@ -151,7 +156,7 @@ class Contact extends React.Component {
       <section>  
           <Grid>
             <Row center="xs">
-              <Col xs={12} md={6}>
+              <Col xs={12} md={8} lg={6}>
                 <br/>
                 <ContactBackground>
                   <FormContainer name="contact" onSubmit={this.handleSubmit}>
@@ -159,28 +164,25 @@ class Contact extends React.Component {
                   <p>Have a project you want us to help you with? Get in touch.</p>
                   <input type="hidden" name="form-name" value="contact" />
                   <WrapInput>
-                    <label>
+                    <InputLabel>
                       Your Name: 
-                    </label>     
+                    </InputLabel>     
                       <Box type="text" placeholder="Enter your name..." name="name" value={name} onChange={this.handleChange} />
                     <Focus></Focus>  
-                    </WrapInput>
-                    <br/>    
+                    </WrapInput>   
                     <WrapInput>            
-                      <label>
+                      <InputLabel>
                         Your Email:
-                      </label>
+                      </InputLabel>
                         <Box type="email" placeholder="Enter your email..." name="email" value={email} onChange={this.handleChange} />
                       <Focus></Focus>
                     </WrapInput>
-                    <br/>
                     <WrapInput>       
-                      <label>
+                      <InputLabel>
                         Message: 
-                      </label>
+                      </InputLabel>
                       <TextBox name="message" placeholder="Enter your message..." value={message} onChange={this.handleChange} />
                     </WrapInput>
-                      <br/>
                       <Btn type="submit">Send</Btn>
                   </FormContainer>
                 </ContactBackground>

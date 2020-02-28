@@ -4,7 +4,7 @@ import Home from "../Home/Home";
 import Contact from "../Contact/Contact";
 import Services from "../Services/Services";
 import styled from 'styled-components';
-import ThankYou from '../Contact/ThankYou';
+import Work from '../Work/Work';
 
 import {
   BrowserRouter as Router,
@@ -13,19 +13,22 @@ import {
 } from "react-router-dom";
 
 export const NavBar = styled.div`      
-    background-color: #323741;  
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0;
+  background-color: #323741;  
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  flex-wrap: wrap;
 `;
 
 export const Item = styled.li`
     cursor: pointer;
     list-style-type: none;
-    margin-right: 1.25rem;
+    margin-right: 1rem;
+    padding-bottom: .5rem;
 
     &:last-child {
       margin-right: 0;
+      padding-bottom: 0;
     }
 
     &:after {
@@ -73,6 +76,9 @@ function Nav() {
               <Page to="/services">Services</Page>
             </Item>
             <Item>
+              <Page to="/Work">Projects</Page>
+            </Item>
+            <Item>
               <Page to="/contact">Contact</Page>
             </Item>
           </NavBar>
@@ -82,7 +88,7 @@ function Nav() {
       <Route path="/about"  component={About} />
       <Route path="/services"  component={Services} />
       <Route path="/contact"  component={Contact} />
-      <Route path="/thank-you"  component={ThankYou} />
+      <Route path="/work"  component={Work} />
     </Router>
   );
 }

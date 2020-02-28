@@ -14,7 +14,7 @@ export const Description = styled.p`
     font-size: 1.1rem;
     text-align: center;
     
-    @media (min-width: 414px) {
+    @media (min-width: 1280px) {
       text-align: left;
     }
 `;
@@ -24,7 +24,7 @@ export const CardContainer = styled.div`
     box-shadow:  0 22px 70px 4px rgba(215,211,203,0.56), 0 0 0 1px rgba(215,211,203, 0.3);
     background-color: #d7d3cb;
     cursor: pointer;
-    padding: 1.25rem;
+    padding: 1rem;
 `;
 
 
