@@ -8,7 +8,7 @@ export const Title = styled.h1`
     justify-content: center;
     animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both, wobble-hor-bottom 1.5s both;
     
-    font-size: 3.2rem;
+    font-size: 3.5rem;
     @media (min-width: 415px) {
       font-size: 4.5rem;
     }

@@ -40,8 +40,8 @@ function About() {
           <Col xs={12} md={6}>
             <Project
                 title="Leeds Rhinos"
-                description="On this Elliot worked on the front end templates, which consist of the styling and layout. He was tasked with
-                creating the site based of provided design templates."
+                description="On this Elliot worked on the front end templates, which consisted of the styling and layout. He was tasked with
+                creating the site based on provided design templates."
                 link="https://therhinos.co.uk"
               />
           </Col>
@@ -56,7 +56,7 @@ function About() {
             <Project
                 title="Lesson's for less"
                 description="This site allows users to compare driving lesson prices. Elliot was involved in designing of the website and
-                the build of the templates."
+                the creation of templates."
                 link="https://lessons4less.co.uk"
               />
           </Col>
