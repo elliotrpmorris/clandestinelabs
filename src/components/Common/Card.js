@@ -12,6 +12,11 @@ export const Title = styled.h2`
 export const Description = styled.p`      
     color: #323741;  
     font-size: 1.1rem;
+    text-align: center;
+    
+    @media (min-width: 414px) {
+      text-align: left;
+    }
 `;
 
 export const CardContainer = styled.div`   
