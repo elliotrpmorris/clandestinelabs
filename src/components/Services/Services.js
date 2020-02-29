@@ -26,7 +26,7 @@ export const SubTitle = styled.p`
 
 function Services() {
   return (
-   <section>
+   <section id="page-wrap">
       <Grid>
         <Row>
           <Col xs={12}>
@@ -48,8 +48,8 @@ function Services() {
           <Col xs={12} md={4}>
           <Service
               title="Website hosting"
-              description="Now you have you shiny new website it needs a home. We can provide this home and are happy to provide
-              further updates to your site as agreed in the contact that will be discussed."
+              description="Now you have your shiny new website it needs a home. We can provide this home and are happy to provide
+              further updates to your site as agreed in the contract that will be discussed."
             />
           </Col>
           <Col xs={12} md={4}>

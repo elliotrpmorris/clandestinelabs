@@ -6,7 +6,11 @@ export const ContactBackground = styled.div`
   background-color: #d7d3cb;
   border-radius: 0.7em;
   animation: slit-in-horizontal 0.5s ease-out both;
+  margin-top: 2.5rem;
 
+  @media (min-width: 769px) {
+    margin-top: 0;
+  }
   @keyframes slit-in-horizontal {
     0% {
       -webkit-transform: translateZ(-800px) rotateX(90deg);
@@ -153,7 +157,7 @@ class Contact extends React.Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <section>  
+      <section id="page-wrap">  
           <Grid>
             <Row center="xs">
               <Col xs={12} md={8} lg={6}>
