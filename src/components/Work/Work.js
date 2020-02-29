@@ -19,14 +19,14 @@ export const SubTitle = styled.p`
     display: flex;
     justify-content: center;
     font-size: 1rem;
-    @media (min-width: 414px) {
+    @media (min-width: 415px) {
       font-size: 1.1rem;
     }
 `;
 
 function About() {
   return (
-    <section>
+    <section id="page-wrap">
        <Grid>
         <Row>
           <Col xs={12}>

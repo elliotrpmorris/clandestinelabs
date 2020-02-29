@@ -28,7 +28,7 @@ export const SubTitle = styled.p`
 
 function About() {
   return (
-    <section>
+    <section id="page-wrap">
        <Grid>
         <Row>
           <Col xs={12}>

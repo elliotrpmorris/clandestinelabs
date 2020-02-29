@@ -5,7 +5,7 @@ import Contact from "../Contact/Contact";
 import Services from "../Services/Services";
 import styled from 'styled-components';
 import Work from '../Work/Work';
-
+import { elastic as Menu } from 'react-burger-menu'
 import {
   BrowserRouter as Router,
   Route,
@@ -20,70 +20,53 @@ export const NavBar = styled.div`
   flex-wrap: wrap;
 `;
 
-export const Item = styled.li`
-    cursor: pointer;
-    list-style-type: none;
-    margin-right: 1rem;
-    padding-bottom: .5rem;
-
-    &:last-child {
-      margin-right: 0;
-      padding-bottom: 0;
-    }
-
-    &:after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 2px;
-      background: #fff;
-      transition: width 0.3s;
-      transform: background 0.5s;
-      position: relative;
-      z-index: 2;
-    }
-
-    @media (hover) {
-      &:hover,
-      &:focus {
-        color: #fff;
-        transition: color 0.6s;
-        &:after {
-          width: 100%;
-        }
-      }
-`;
-
 export const Page = styled(Link)`
+  cursor: pointer;
+  padding-bottom: .5rem;
   color: #fff;
-  font-size: 1.25rem;
+  font-size: 2rem;
   text-decoration: none;
+
+  @media (min-width: 414px) { 
+    font-size: 1.25rem;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s;
+    transform: background 0.5s;
+    position: relative;
+    z-index: 2;
+  }
+
+  @media (hover) {
+    &:hover,
+    &:focus {
+      color: #fff;
+      transition: color 0.6s;
+      &:after {
+        width: 100%;
+      }
+    }
+  }
 `;
 
 function Nav() {
   return (
     <Router>
-      <section>
-        <nav>
-          <NavBar>
-            <Item>
-              <Page to="/">Home</Page>
-            </Item>
-            <Item>
-              <Page to="/about">About</Page>
-            </Item>
-            <Item>
-              <Page to="/services">Services</Page>
-            </Item>
-            <Item>
-              <Page to="/Work">Projects</Page>
-            </Item>
-            <Item>
-              <Page to="/contact">Contact</Page>
-            </Item>
-          </NavBar>
-        </nav>
-      </section>
+      <div id="outer-container">
+        <Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } disableAutoFocus right>
+          <Page to="/">Home</Page> 
+          <Page to="/about">About</Page> 
+          <Page to="/services">Services</Page>      
+          <Page to="/Work">Projects</Page>        
+          <Page to="/contact">Contact</Page>      
+        </Menu>
+      </div>
       <Route path="/" exact component={Home} />
       <Route path="/about"  component={About} />
       <Route path="/services"  component={Services} />
