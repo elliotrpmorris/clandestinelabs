@@ -59,7 +59,7 @@ function Nav() {
   return (
     <Router>
       <div id="outer-container">
-        <Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } disableAutoFocus right>
+        <Menu isOpen={false} pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } disableAutoFocus right>
           <Page to="/">Home</Page> 
           <Page to="/about">About</Page> 
           <Page to="/services">Services</Page>      

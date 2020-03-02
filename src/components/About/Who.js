@@ -9,7 +9,7 @@ function Who() {
         <Row>
           <Col xs={12} lg={8}>
             <Card
-              title="Who are we"
+              title="Who are we?"
               description="We aim to offer high quality web development services. 
               To help take off your online presence."
             />
