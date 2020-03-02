@@ -31,6 +31,10 @@ export const Page = styled(Link)`
     font-size: 1.25rem;
   }
 
+  &:focus,:active{
+    outline: none;
+  }
+  
   &:after {
     content: "";
     display: block;
