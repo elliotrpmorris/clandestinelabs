@@ -11,7 +11,7 @@ function What() {
             <Card
               title="What is it?"
               description="From simple static websites to full blown dynamic web applications. 
-              Whether you require a simple 4 page web site consisting of a simple contact form and text to a fully fledge booking application.
+              Whether you require a simple 4 page web site consisting of a simple contact form and text to a fully fleged booking application.
               We can provide the expertise to get the job done."
             />
           </Col>

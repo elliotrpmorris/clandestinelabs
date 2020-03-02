@@ -11,7 +11,7 @@ function Who() {
             <Card
               title="Who are we?"
               description="We aim to offer high quality web development services. 
-              To help take off your online presence."
+              To help your online presence grow."
             />
           </Col>
         </Row>

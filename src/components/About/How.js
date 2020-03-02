@@ -11,7 +11,7 @@ function How() {
             <Card
               title="How it goes down"
               description="We aim to provide top quality support and advice during the process, 
-              we are always happy to consult on what we see for for the site to contain."
+              we are always happy to consult on what we see for the site to contain."
             />
           </Col>
         </Row>
