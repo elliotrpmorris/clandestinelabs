@@ -66,7 +66,7 @@ function Home() {
         <Row>
           <Col xs={12}>
           <Title>Clandestine <br/>
-            Lab's</Title>
+            Labs</Title>
           </Col>
         </Row>
       </Grid>

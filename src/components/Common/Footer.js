@@ -11,7 +11,8 @@ export const Link = styled.a`
 `;
 
 export const Foot = styled.div`      
-    text-align: center;
+  text-align: center;
+  margin-bottom: 1rem;
 `;
 
 export const Icon = styled(FontAwesomeIcon)`
