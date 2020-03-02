@@ -41,7 +41,7 @@ function Services() {
           <Service
               title="Website Development"
               description="We offer bespoke website development, we can work from provided templates or create our own depending
-              on your requirements. whether you require just static pages or customisable content using a (CMS) we will help to
+              on your requirements. Whether you require just static pages or customisable content using a (CMS) we will help to
               consult on the best solution for you. All websites will be mobile friendly!"
             />
           </Col>
