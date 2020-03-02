@@ -24,17 +24,17 @@ export const Page = styled(Link)`
   cursor: pointer;
   padding-bottom: .5rem;
   color: #fff;
-  font-size: 2rem;
+  font-size: 3rem;
   text-decoration: none;
 
-  @media (min-width: 414px) { 
+  @media (min-width: 415px) { 
     font-size: 1.25rem;
   }
 
   &:focus,:active{
     outline: none;
   }
-  
+
   &:after {
     content: "";
     display: block;
