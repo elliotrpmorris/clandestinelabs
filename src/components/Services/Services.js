@@ -59,6 +59,13 @@ function Services() {
               for more information on how!"
             />
           </Col>
+          <Col xs={12} md={4}>
+          <Service
+              title="Website optimization"
+              description="Your current site slow or not meeting your requirements? Not to worry we can help with this
+              by reviewing your site and seeing what improvements can be made to increase site performance."
+            />
+          </Col>
         </Row>
       </Grid>
    </section>
