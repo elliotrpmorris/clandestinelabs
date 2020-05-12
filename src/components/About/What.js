@@ -1,6 +1,6 @@
-import React from 'react';
-import Card from '../Common/Card';
-import {Grid, Col, Row} from 'react-styled-flexboxgrid';
+import React from "react";
+import Card from "../Common/Card";
+import { Grid, Col, Row } from "react-styled-flexboxgrid";
 
 function What() {
   return (
@@ -10,9 +10,8 @@ function What() {
           <Col xs={12} lg={8}>
             <Card
               title="What is it?"
-              description="From simple static websites to full blown dynamic web applications. 
-              Whether you require a simple 4 page web site consisting of a simple contact form and text to a fully fleged booking application.
-              We can provide the expertise to get the job done."
+              description="Clandestine Labs can provide anything from basic static web sites to feature rich web applications and ecommerce sites.
+              We can provide the right expertise to get the job done."
             />
           </Col>
         </Row>
