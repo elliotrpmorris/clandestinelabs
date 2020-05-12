@@ -40,22 +40,22 @@ function About() {
           <Col xs={12} md={6}>
             <Project
               title="Leeds Rhinos"
-              description="On this Elliot worked on the front end templates, which consisted of the styling and layout. He was tasked with
-                creating the site based on provided design templates."
+              description="On this Clandestine Labs worked on the creating the frontend templates, aswell as integration with wordpress and working on a plugin which pulled in live game stats."
               link="https://therhinos.co.uk"
             />
           </Col>
           <Col xs={12} md={6}>
             <Project
               title="Asda Money"
-              description="Elliot created the current home page built from a given design template. which is fully mobile responsive."
+              description="Clandestine Labs created the current home page built from a given design template. which is completely mobile responsive.
+              This website is viewed several million times a month!"
               link="https://money.asda.com"
             />
           </Col>
           <Col xs={12} md={6}>
             <Project
               title="Lesson's for less"
-              description="This site allows users to compare driving lesson prices. Elliot was involved in designing of the website and
+              description="This site allows users to compare driving lesson prices. Clandestine Labs was involved in designing of the website and
                 the creation of templates."
               link="https://lessons4less.co.uk"
             />
