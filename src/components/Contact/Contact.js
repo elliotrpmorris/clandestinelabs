@@ -202,7 +202,7 @@ class Contact extends React.Component {
                   </WrapInput>
                   <br></br>
                   <div
-                    class="g-recaptcha"
+                    className="g-recaptcha"
                     data-sitekey="6LcoZfYUAAAAAChixh7WtzjENdQk6hx_PCLq7Iqp"
                   ></div>
                   <Btn type="submit">Send</Btn>
