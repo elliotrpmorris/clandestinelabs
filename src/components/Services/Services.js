@@ -56,7 +56,7 @@ function Services() {
             <Service
               title="Web App development"
               description="Need more than just a website? We can provide full web applications to help your business grow. Contact us 
-              for more information on how! This any business process which can be turned into an application"
+              for more information on how! This includes any business process which could be turned into an application"
             />
           </Col>
           <Col xs={12} md={4}>
