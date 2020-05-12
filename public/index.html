@@ -15,6 +15,13 @@
 
       gtag("config", "UA-166282432-1");
     </script>
+    <script type="text/javascript">
+      var onloadCallback = function () {
+        grecaptcha.render("html_element", {
+          sitekey: "6LcoZfYUAAAAAChixh7WtzjENdQk6hx_PCLq7Iqp",
+        });
+      };
+    </script>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -50,11 +57,23 @@
   </head>
   <body>
     <!-- A little help for the Netlify post-processing bots -->
-    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <form
+      name="contact"
+      data-netlify-recaptcha="true"
+      netlify
+      netlify-honeypot="bot-field"
+      hidden
+    >
+      <div id="html_element"></div>
       <input type="text" name="name" />
       <input type="email" name="email" />
       <textarea name="message"></textarea>
     </form>
+    <script
+      src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+      async
+      defer
+    ></script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>

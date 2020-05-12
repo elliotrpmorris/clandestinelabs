@@ -1,6 +1,6 @@
-import React from 'react';
-import {Grid, Col, Row} from 'react-styled-flexboxgrid';
-import styled from 'styled-components';
+import React from "react";
+import { Grid, Col, Row } from "react-styled-flexboxgrid";
+import styled from "styled-components";
 
 export const ContactBackground = styled.div`
   background-color: #d7d3cb;
@@ -14,23 +14,23 @@ export const ContactBackground = styled.div`
   @keyframes slit-in-horizontal {
     0% {
       -webkit-transform: translateZ(-800px) rotateX(90deg);
-              transform: translateZ(-800px) rotateX(90deg);
+      transform: translateZ(-800px) rotateX(90deg);
       opacity: 0;
     }
     54% {
       -webkit-transform: translateZ(-160px) rotateX(87deg);
-              transform: translateZ(-160px) rotateX(87deg);
+      transform: translateZ(-160px) rotateX(87deg);
       opacity: 1;
     }
     100% {
       -webkit-transform: translateZ(0) rotateX(0);
-              transform: translateZ(0) rotateX(0);
+      transform: translateZ(0) rotateX(0);
     }
   }
 `;
 
-export const Box = styled.input`      
-  color: #323741;  
+export const Box = styled.input`
+  color: #323741;
   display: block;
   width: 100%;
   background: 0 0;
@@ -38,7 +38,7 @@ export const Box = styled.input`
   padding: 5px 5px 0 5px;
   outline: none;
   border: none;
-  
+
   font-size: 1rem;
   @media (min-width: 414px) {
     font-size: 1.1rem;
@@ -68,7 +68,7 @@ export const Focus = styled.span`
   top: 0;
   left: 0;
   pointer-events: none;
-  &:before{
+  &:before {
     content: "";
     display: block;
     position: absolute;
@@ -76,13 +76,13 @@ export const Focus = styled.span`
     left: 0;
     width: 0;
     height: 2px;
-    transition: all .4s;
+    transition: all 0.4s;
     background: #323741;
   }
 `;
 
-export const TextBox = styled.textarea`      
-  color: #323741;  
+export const TextBox = styled.textarea`
+  color: #323741;
   font-size: 1.1rem;
   min-height: 110px;
   display: block;
@@ -95,9 +95,9 @@ export const TextBox = styled.textarea`
   resize: vertical;
 `;
 
-export const Btn = styled.button`   
-  margin-top: 1rem;   
-  color: #fff;  
+export const Btn = styled.button`
+  margin-top: 1rem;
+  color: #fff;
   font-size: 1.1rem;
   line-height: 1.2;
   display: flex;
@@ -111,29 +111,29 @@ export const Btn = styled.button`
   border: none;
   position: relative;
   z-index: 1;
-  transition: all .4s;
+  transition: all 0.4s;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     transform: scale(1.1);
   }
 `;
 
 export const FormContainer = styled.form`
   padding: 1.5rem;
-`; 
+`;
 
 export const Title = styled.h1`
   font-size: 2rem;
   padding: 0;
-  margin: .25rem 0;
+  margin: 0.25rem 0;
 `;
 
 const encode = (data) => {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
-}
+};
 class Contact extends React.Component {
   constructor(props) {
     super(props);
@@ -141,59 +141,72 @@ class Contact extends React.Component {
   }
 
   /* Here’s the juicy bit for posting the form submission */
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state },)
+      body: encode({ "form-name": "contact", ...this.state }),
     })
       .then(() => alert("Success!"))
-      .catch(error => alert(error));
+      .catch((error) => alert(error));
     e.preventDefault();
   };
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+  handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   render() {
     const { name, email, message } = this.state;
     return (
-      <section id="page-wrap">  
-          <Grid>
-            <Row center="xs">
-              <Col xs={12} md={8} lg={6}>
-                <br/>
-                <ContactBackground>
-                  <FormContainer name="contact" onSubmit={this.handleSubmit}>
+      <section id="page-wrap">
+        <Grid>
+          <Row center="xs">
+            <Col xs={12} md={8} lg={6}>
+              <br />
+              <ContactBackground>
+                <FormContainer name="contact" onSubmit={this.handleSubmit}>
                   <Title>We'd love to hear from you!</Title>
-                  <p>Have a project you want us to help you with? Get in touch.</p>
+                  <p>
+                    Have a project you want us to help you with? Get in touch.
+                  </p>
                   <input type="hidden" name="form-name" value="contact" />
                   <WrapInput>
-                    <InputLabel>
-                      Your Name: 
-                    </InputLabel>     
-                      <Box type="text" placeholder="Enter your name..." name="name" value={name} onChange={this.handleChange} />
-                    <Focus></Focus>  
-                    </WrapInput>   
-                    <WrapInput>            
-                      <InputLabel>
-                        Your Email:
-                      </InputLabel>
-                        <Box type="email" placeholder="Enter your email..." name="email" value={email} onChange={this.handleChange} />
-                      <Focus></Focus>
-                    </WrapInput>
-                    <WrapInput>       
-                      <InputLabel>
-                        Message: 
-                      </InputLabel>
-                      <TextBox name="message" placeholder="Enter your message..." value={message} onChange={this.handleChange} />
-                    </WrapInput>
-                      <Btn type="submit">Send</Btn>
-                  </FormContainer>
-                </ContactBackground>
-                <br/>
-              </Col>
-            </Row>
-          </Grid> 
+                    <InputLabel>Your Name:</InputLabel>
+                    <Box
+                      type="text"
+                      placeholder="Enter your name..."
+                      name="name"
+                      value={name}
+                      onChange={this.handleChange}
+                    />
+                    <Focus></Focus>
+                  </WrapInput>
+                  <WrapInput>
+                    <InputLabel>Your Email:</InputLabel>
+                    <Box
+                      type="email"
+                      placeholder="Enter your email..."
+                      name="email"
+                      value={email}
+                      onChange={this.handleChange}
+                    />
+                    <Focus></Focus>
+                  </WrapInput>
+                  <WrapInput>
+                    <InputLabel>Message:</InputLabel>
+                    <TextBox
+                      name="message"
+                      placeholder="Enter your message..."
+                      value={message}
+                      onChange={this.handleChange}
+                    />
+                  </WrapInput>
+                  <Btn type="submit">Send</Btn>
+                </FormContainer>
+              </ContactBackground>
+              <br />
+            </Col>
+          </Row>
+        </Grid>
       </section>
     );
   }
