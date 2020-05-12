@@ -200,6 +200,7 @@ class Contact extends React.Component {
                       onChange={this.handleChange}
                     />
                   </WrapInput>
+                  <br></br>
                   <div
                     class="g-recaptcha"
                     data-sitekey="6LcoZfYUAAAAAChixh7WtzjENdQk6hx_PCLq7Iqp"
