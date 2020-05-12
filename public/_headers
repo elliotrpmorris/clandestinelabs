@@ -1,4 +1,4 @@
-/*
+
 Content-Security-Policy: default-src ‘self’ ‘unsafe-inline’ ‘unsafe-eval’ https: data:
 X-Frame-Options: *ALLOW-FROM https://labs.clandestine.tech*
 X-XSS-Protection: 1; mode=block
