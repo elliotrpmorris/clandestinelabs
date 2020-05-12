@@ -1,6 +1,6 @@
-import React from 'react';
-import Card from '../Common/Card';
-import {Grid, Col, Row} from 'react-styled-flexboxgrid';
+import React from "react";
+import Card from "../Common/Card";
+import { Grid, Col, Row } from "react-styled-flexboxgrid";
 
 function How() {
   return (
@@ -11,7 +11,7 @@ function How() {
             <Card
               title="How it goes down"
               description="We aim to provide top quality support and advice during the process, 
-              we are always happy to consult on what we see for the site to contain."
+              we are always happy to consult on what we feel the site should contain."
             />
           </Col>
         </Row>
