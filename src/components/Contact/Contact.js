@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Col, Row } from "react-styled-flexboxgrid";
 import styled from "styled-components";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export const ContactBackground = styled.div`
   background-color: #d7d3cb;
@@ -201,10 +202,10 @@ class Contact extends React.Component {
                     />
                   </WrapInput>
                   <br></br>
-                  <div
-                    className="g-recaptcha"
-                    data-sitekey="6LcoZfYUAAAAAChixh7WtzjENdQk6hx_PCLq7Iqp"
-                  ></div>
+                  <ReCAPTCHA
+                    sitekey="6LcoZfYUAAAAAChixh7WtzjENdQk6hx_PCLq7Iqp"
+                    onChange={onChange}
+                  />
                   <Btn type="submit">Send</Btn>
                 </FormContainer>
               </ContactBackground>
