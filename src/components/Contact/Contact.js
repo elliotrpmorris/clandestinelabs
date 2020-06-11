@@ -202,10 +202,6 @@ class Contact extends React.Component {
                     />
                   </WrapInput>
                   <br></br>
-                  <ReCAPTCHA
-                    sitekey="6LcoZfYUAAAAAChixh7WtzjENdQk6hx_PCLq7Iqp"
-                    onChange={onChange}
-                  />
                   <Btn type="submit">Send</Btn>
                 </FormContainer>
               </ContactBackground>
